@@ -1,0 +1,29 @@
+/* NotePad.css */
+    .NotePad {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .NotePad textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .NotePad div {
+        margin-bottom: 20px;
+    }
+    
+    .NotePad p {
+        margin: 10px 0;
+    }
+    
+    .NotePad img,
+    .NotePad video {
+        max-width: 100%;
+        height: auto;
+    }
+    
