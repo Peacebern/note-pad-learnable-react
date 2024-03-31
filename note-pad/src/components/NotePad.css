@@ -4,19 +4,38 @@
         margin: 0 auto;
         padding: 20px;
     }
-    
+    .Note-gap input {
+        background-color: rgb(235, 216, 216);
+        border-radius: 10px;
+        border: none;
+        padding: 1rem;
+    }
+
     .NotePad textarea {
         width: 100%;
         height: 100px;
         margin-bottom: 20px;
         padding: 10px;
         font-size: 16px;
+        background-color: rgb(243, 232, 234);
+        margin-top: 20px;
+        border-radius: 20px;
+        margin-left: -10px;
+        border: none;
     }
     
     .NotePad div {
         margin-bottom: 20px;
     }
     
+    .Note-gap {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: flex-start;
+        gap: 40px;
+        flex-direction: column;
+    }
+
     .NotePad p {
         margin: 10px 0;
     }

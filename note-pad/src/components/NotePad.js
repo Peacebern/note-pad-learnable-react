@@ -61,46 +61,48 @@ const NotePad = () => {
 
     return (
         <div className="NotePad">
-        <input
-            type="text"
-            placeholder="Enter title"
-            value={title}
-            onChange={handleTitleChange}
-        />
-        <textarea
-            placeholder="Enter note"
-            value={text}
-            onChange={handleTextChange}
-        />
-        <div {...getRootImageProps()}>
-            <input {...getInputImageProps()} />
-            <p>Drag 'n' drop an image here, or click to select image</p>
-        </div>
-        {image && <img src={image} alt="Uploaded" />}
-        <div {...getRootVideoProps()}>
-            <input {...getInputVideoProps()} />
-            <p>Drag 'n' drop a video here, or click to select video</p>
-        </div>
-        {video && <video controls src={video} />}
-        <button onClick={handleSaveNote}>Save Note</button>
-        <div className="NoteList">
-            <h2>Notes List</h2>
-            <ul>
-            {notes.map((note, index) => (
-                <li key={index} onClick={() => handleNoteClick(note)}>
-                {note.title}
-                </li>
-            ))}
-            </ul>
-        </div>
-        {currentNote && (
-            <div className="CurrentNote">
-            <h2>{currentNote.title}</h2>
-            <p>{currentNote.text}</p>
-            {currentNote.image && <img src={currentNote.image} alt="Uploaded" />}
-            {currentNote.video && <video controls src={currentNote.video} />}
+            <div className="Note-gap">
+                <input
+                    type="text"
+                    placeholder="ENTER TITLE"
+                    value={title}
+                    onChange={handleTitleChange}
+                />
+                <textarea
+                    placeholder="ENTER NOTE"
+                    value={text}
+                    onChange={handleTextChange}
+                />
+                </div>
+            <div {...getRootImageProps()}>
+                <input {...getInputImageProps()} />
+                <p>DRAG 'N ' IMAGE OR CLICK TO SELECT IMAGE</p>
             </div>
-        )}
+            {image && <img src={image} alt="Uploaded" />}
+            <div {...getRootVideoProps()}>
+                <input {...getInputVideoProps()} />
+                <p>DRAG 'N' VIDEO OR CLICK TO SELECT VIDEO</p>
+            </div>
+            {video && <video controls src={video} />}
+            <button onClick={handleSaveNote}>SAVE NOTE!!</button>
+            <div className="NoteList">
+                <h2>Notes List</h2>
+                <ul>
+                {notes.map((note, index) => (
+                    <li key={index} onClick={() => handleNoteClick(note)}>
+                    {note.title}
+                    </li>
+                ))}
+                </ul>
+            </div>
+            {currentNote && (
+                <div className="CurrentNote">
+                <h2>{currentNote.title}</h2>
+                <p>{currentNote.text}</p>
+                {currentNote.image && <img src={currentNote.image} alt="Uploaded" />}
+                {currentNote.video && <video controls src={currentNote.video} />}
+                </div>
+            )}
         </div>
     );
     };
